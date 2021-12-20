@@ -2,14 +2,13 @@
 layout: post-page
 title: Exploração utilizando D*
 subtitle: Planejadores Globais no TurtleBot3 by Juliana Santana
-cover-img: assets/img/dstar/wallpaper.jpg
+cover-img: assets/img/dstar/wallpaper4.png
 thumbnail-img: /assets/img/dstar/thumb.png
 share-img: /assets/img/rosa-logo-redondo.png
 tags: [rasc]
 comments: true
 ---
 
-<!-- %//todo: Provável, trocar wallpaper -->
 
 O D\* é um algoritmo de exploração capaz de gerar trajetórias baseando-se em informações iniciais conhecidas do ambiente e em informações estimadas. Posteriormente, de forma incremental, ele ajusta o caminho conforme as informações sobre o ambiente são obtidas.
 
