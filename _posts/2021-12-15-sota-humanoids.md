@@ -23,7 +23,7 @@ Este estudo do Estado da Arte sobre robôs antropomórficos aborda algumas das a
 E, o Digit, que em uma parceria da Agility Robotics com a Ford, está sendo testado em conjunto com um carro autônomo, em um projeto que visa automatizar todo o processo de entrega de mercadorias.
 
 {:.center}
-[![drawing400](../assets/img/humanoids-sota/Agility-GIF-2.gif)](../assets/img/humanoids-sota/Agility-GIP-2.gif)
+[![drawing400](../assets/img/humanoids-sota/Agility-GIF-2.gif)](../assets/img/humanoids-sota/Agility-GIF-2.gif)
 
 
 Nesta documentação também é apresentada uma seção sobre as principais características de alguns modelos de robôs humanoides comumente utilizados por pesquisadores para realizar estudos sobre a locomoção bípede. Dentre as referêcias utilizadas nesta pesquisa a maior parte utilizava como modelo o NAO, o DARWIN-OP, o LOLA ou o HUBO.
@@ -39,7 +39,11 @@ A pesquisa realizada foi de extrema importância para a análise e o aprendizado
 
 ## Referências
 
+[1] CNBC. **Look inside the hospital in China where coronavirus patients were treated by robots.** 2021. <https://www.cnbc.com/2020/03/23/video-hospital-in-china-where-covid-19-patients-treated-by-robots.html>. Accessed: 2021-12-02.
 
+[2] SCIENCE, P. **Tesla wants to make humanoid robots. Here’s their competition.** 2021.<https://www.popsci.com/technology/list-of-companies-creating-human-like-robots/>. Accessed: 2021-12-02.
+
+[3] ASME. **10 Humanoid Robots of 2020. 2021.** <https://www.asme.org/topics-resources/content/10-humanoid-robots-of-2020>. Accessed: 2021-12-02. 
 
 * * *
 
