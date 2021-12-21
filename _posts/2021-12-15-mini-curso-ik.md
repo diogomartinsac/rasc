@@ -15,14 +15,14 @@ A cinemática é o estudo mais básico de como os sistemas mecânicos se comport
 
 Os robôs manipuladores são muito utilizados nas indústrias devido as suas diversas funcionalidades como para o manuseio de materiais, soldagem e montagem, sendo empregados em ambientes de alto risco ou em atividades que exigem precisão, como cirurgias. A cinemática, quando falamos de manipuladores, refere-se a todas as propriedades do movimento que sejam geométricas e baseadas no tempo.
 
-### Cinemática Direta vs Cinemática Inversa
+## Cinemática Direta vs Cinemática Inversa
 
 A cinemática direta tem como informação os ângulos das juntas e busca calcular a posição e orientação do end-effector do manipulador. Enquanto, a cinemática inversa tem um objetivo mais complexo, que é encontrar os ângulos das juntas dada uma pose (posição e orientação) para o end-effector (efetuador).
 
 {:.center}
 [![drawing600](../assets/img/mini-curso-ik/ik-matlab.jpg)](../assets/img/mini-curso-ik/ik-matlab.jpg)
 
-### Importância da cinemática Inversa
+## Importância da cinemática Inversa
 
 A cinemática inversa soluciona uma das tarefas ou aplicação mais importantes quando estamos falando de manipuladores ou robôs articulados, que é o de possibilitar o robô atingir as posições e orientações desejadas. Além disso, permite encontrar os valores exatos dos ângulos das juntas que levarão a esta pose, tendo em vista que não há uma relação direta entre a posição do end-effector e uma junta em particular. 
 
@@ -32,7 +32,7 @@ Para mais informações à respeito do planejamento de trajetória de um manipul
 {:.center}
 [![drawing600](../assets/img/mini-curso-ik/warthog-manipulator.gif)](../assets/img/mini-curso-ik/warthog-manipulator.gif)
 
-### Metodologia
+## Metodologia
 
 O nosso objetivo é compreender os fundamentos da cinemática inversa, com isso, o primeiro passo para aplicar os métodos de solução é atribuir um sistema de referência aos elos do manipulador. Para então atribuir os parâmetros de Denavit-Hartenberg (DH) para o sistema e, então construir matrizes homogêneas e realizar a transformação de referências. Por fim, são aplicados os métodos de solução, no nosso caso iremos abordar os métodos geométrico e o algébrico para então encontrarmos as equações.
 
@@ -83,9 +83,7 @@ Os tipos de juntas mais utilizadas nos manipuladores são as juntas de revoluç�
 
 ## URDF
 
-Uma das aplicações destes conceitos está na implementação do URDF (Unified Robot Description Format), o qual é um arquivo em XML que permite a construção do modelo do seu robô, a partir da descrição do seu funcionamento e estrutura com base nas conexões dos seus elos e juntas, utilizando arquivos CAD para gerar a parte visual.
-
-Este [post](https://mhar-vell.github.io/rasc/2021-07-21-aperea-simulacao/) apresenta mais detalhes a respeito da configuração do URDF.
+Uma das aplicações destes conceitos está na implementação do URDF (Unified Robot Description Format), o qual é um arquivo em XML que permite a construção do modelo do seu robô, a partir da descrição do seu funcionamento e estrutura com base nas conexões dos seus elos e juntas, utilizando arquivos CAD para gerar a parte visual. Este [post](https://mhar-vell.github.io/rasc/2021-07-21-aperea-simulacao/) apresenta mais detalhes a respeito da configuração do URDF.
 
 # Descrições espaciais e transformações
 
@@ -123,9 +121,9 @@ O sistema de referências é um conjunto de 4 vetores que fornecem a posição e
 
 A transformação homogênea corresponde a uma matriz 4x4 que dispõe a rotação e a translação geral na forma de uma única matriz e também é utilizada para descrever os sistemas de referência. Desta forma, é feito o mapeamento de um sistema de referência para outro como um operador em forma de matriz.
 
-A descrição do sistema de referência {B} em relação a {A} é $ _{B}^{A}\textrm{T}$.
-
 # Cinemática
+
+Retornando a falar sobre a cinemática...
 
 ## Cinemática Direta
 
@@ -138,21 +136,21 @@ Os parâmetros de Denavit-Hartenberg ou DH são 4 parâmetros associados a uma c
 {:.center}
 [![drawing300](../assets/img/mini-curso-ik/para.png)](../assets/img/mini-curso-ik/para.png)
 
-Esta convenção foi desenvolvida por Jacques Denavit, o qual era doutor em Engenharia mecânica e tinha bastante interesse pela área principalmente em relação a cinemática e a dinêmica. 
-E Richard Hartenberg que lecionou na área da engenharia mecânica por cerca de 56 anos e desenvolveu diversas pesquisas na área, o que influenciou o renascimento do interesse de outros pesquisadores por essa área.
+Esta convenção foi desenvolvida por Jacques Denavit, o qual era doutor em Engenharia mecânica e tinha bastante interesse pela área principalmente em relação a cinemática e a dinâmica. 
+E por Richard Hartenberg que lecionou na área da Engenharia mecânica por cerca de 56 anos e desenvolveu diversas pesquisas na área, o que influenciou o renascimento do interesse de outros pesquisadores por essa área.
 
 {:.center}
 [![drawing400](../assets/img/mini-curso-ik/DH.png)](../assets/img/mini-curso-ik/DH.png)
 
-Esta notação provê uma metodologia padrão para escrever as equações de um manipulador onde os parâmetros de elo são definidos da seguinte maneira:
+Esta notação provê uma metodologia padrão para escrever as equações de um manipulador onde os parâmetros de elo são definidos da seguinte maneira: 
 
-$ a_{i} \rightarrow$ a distância de $\hat{Z}_i$ a $\hat{Z}_{i+1}$ medida ao longo de $\hat{X}_i$;
-
-$ \alpha_{i} \rightarrow$ o ângulo de $\hat{Z}_i$ a $\hat{Z}_{i+1}$ medida ao longo de $\hat{X}_i$;
+$ \theta_{i} \rightarrow$ o ângulo de $$\hat{X}_{i-1}$$ a $$\hat{X}_{i}$$ medida ao longo de $$\hat{Z}_i$$;
 
 $ d_{i} \rightarrow$ a distância de $\hat{X}_{i-1}$ a $\hat{X}_{i}$ medida ao longo de $\hat{Z}_i$;
 
-$ \theta_{i} \rightarrow$ o ângulo de $\hat{X}_{i-1}$ a $\hat{X}_{i}$ medida ao longo de $\hat{Z}_i$.
+$ a_{i} \rightarrow$ a distância de $\hat{Z}_i$ a $\hat{Z}_{i+1}$ medida ao longo de $\hat{X}_i$;
+
+$ \alpha_{i} \rightarrow$ o ângulo de $\hat{Z}_i$ a $\hat{Z}_{i+1}$ medida ao longo de $\hat{X}_i$.
 
 
 {:.center}
@@ -160,16 +158,98 @@ $ \theta_{i} \rightarrow$ o ângulo de $\hat{X}_{i-1}$ a $\hat{X}_{i}$ medida ao
 
 ## Matriz de Denavit-Hartenberg
 
+Podemos calcular as transformações individuais para cada elo, conforme a matriz homogênea que é composta por variáveis definidas a partir dos valores dos parâmetros de Denavit-Harteberg atribuidos ao sistema.
+
+{:.center}
+[![drawing600](../assets/img/mini-curso-ik/DH-matrix.png)](../assets/img/mini-curso-ik/DH-matrix.png)
+
+E, então as transformações de um elo a outro pode ser feita por meio do produto matricial resultando nas equações básicas para a análise cinemática do manipulador.
+
+
 ## Cinemática Inversa
+
+Na cinemática indireta calculamos os valores dos ângulos das juntas dada a pose para o efetuador do robô. Desta forma, são feitas as transformações para encontrar a trasnformação que define o sistema de referência do punho {W} em relação ao sistema de referência da base {B}. 
+
+A complexidade da cinemática inversa está na resolução das equações cinemáticas por serem não lineares. Portanto, temos que nos preocupar com a existência de soluções, visto que para que uma solução exista, a posição alvo deve estar dentro do espaço de trabalho do manipulador. E, também podem existir múltiplas soluções, o que configura-se como um desafio pois o sistema deve escolher apenas uma das soluções.
 
 ## Categorias de soluções
 
+Existem diversos métodos para a resolução da cinemática inversa. As estratégias de soluções podem ser divididas em 2 categorias amplas:
+
+* **Soluções de forma fechada**: São baseadas em expressões analíticas ou na solução de um polinômio de grau 4 ou menor, de forma que cálculos não iterativos são suficientes para chegar a uma solução. Ex: Método algébrico, método geométrico, solução de Pieper;
+* **Soluções em forma aberta**: São soluções numéricas iterativas e por isso são muito mais lentas em comparação com a forma fechada. Ex: Métodos numéricos. 
+
 ## Prática 1 - Resolução questão no Google Colab
+
+O primeiro desafio deste mini-curso é a resolução de uma questão que envolve todos os conceitos aprendidos e são aplicados os métodos algébrico e geométrico. Este exercício pode ser acessado neste [arquivo](https://drive.google.com/file/d/1F6f_zmpNl0TTneYwa_k1d7ryoSmsrePu/view?usp=sharing) do Google Colab, o qual é um ambiente de desenvolvimento Python executado no navegador usando Google Cloud.
+
+{:.center}
+[![drawing200](../assets/img/mini-curso-ik/colab-logo.png)](../assets/img/mini-curso-ik/colab-logo.png)
+
+Bibliotecas utilizadas:
+
+* **SymPy**: É uma biblioteca Python para matemática simbólica;
+* **Math**: É um módulo integraado que fornece uma série de métodos e constantes matemáticas.
 
 ## Solucionadores
 
+Existem vários métodos de modelagem e soluções de problemas de cinemática inversa. E, todos eles possuem alguns pontos positivos e negativos que devem ser avaliados e selecionados de acordo com a aplicação. 
+
 ## MoveIt
+
+Um exemplo de solucionador é o MoveIt, o qual é um pacote do ROS utilizado por diversas empresas. Este pacote possui funcionalidades como realizar o cálculo da cinemática inversa, fazer o planejamento de trajetórias e verificar a presença de obstáculos.
+
+{:.center}
+[![drawing400](../assets/img/mini-curso-ik/MOVEIT.png)](../assets/img/mini-curso-ik/MOVEIT.png)
 
 ## Prática 2 - Simulação no CoppeliaSim
 
+A segunda prática deste mini-curso é a configuração de um manipulador no software CoppeliaSim. O software deve ser instalado através deste [link](https://www.coppeliarobotics.com/helpFiles/en/inverseKinematicsTutorial.htm), a versão utilizada é a educacional. Após o download do software siga as instruções deste [tutorial]().
+
+{:.center}
+[![drawing400](../assets/img/mini-curso-ik/v-rep.png)](../assets/img/mini-curso-ik/v-rep.png)
+
+O script disponibilizado no simulador apresenta 2 métodos de soluções para a cinemática inversa, onde ambos consideram a matriz jacobiana para definir a trajetória do manipulador, uma análise que está relacionada com a dinâmica. Caso tenha interesse em saber mais sobre trajetória dinâmica dos manipuladores, recomendo a leitura deste [post](https://mhar-vell.github.io/rasc/2021-06-19-trajetoria-dinamica/).
+
+## Considerações finais
+
+Este mini-curso apresentou os principais conceitos relacionados com a análise cinemática de um sistema de manipuladores e a metodologia para encontrar as equações cinemáticas do sistema. Esta metodologia envolve a descrição dos mecanismos por meio dos parâmetros de Denavit-Hartenberg e a trasnformação de um sistema de referência para outro através das matrizes homogêneas e a utilização dos métodos algébrico e geométrico para encontrar as equações da cinemática inversa de um manipulador simmples. A prática com o CoppeliaSim visa a aplicação de alguns dos conceitos abordados na apresentação em um modelo de um robô.
+
+
+<iframe src = "https://drive.google.com/file/d/1OYpyLJfsIrkP8Lt4HiOZhbJuJXMybuVM/preview" width='740' height='430' allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+
+# Referências
+
+1. Craig, John J. **Robótica**. 3ª edição, 2012. 
+2. NORTON, Robert L. **Cinemática e dinâmica dos mecanismos**. AMGH Editora, 2010.
+
+* * *
+<br>
+
+<!-- autor -->
+<center><h3 class="post-title">Autor</h3><br/></center>
+<div class="row">
+<div class="col-xl-auto offset-xl-0 col-lg-4 offset-lg-0 center">
+  <table class="table-borderless highlight">
+    <thead>
+      <tr>
+        <th><img src="{{ 'assets/img/people/juliana-1.png' | relative_url }}" width="100" alt="juliana" class="img-fluid rounded-circle" /></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="font-weight-bolder" style="text-align: center margin-top: 0">
+        <td>Juliana Santana</td>
+      </tr>
+      <tr style="text-align: center" >
+        <td style="vertical-align: top"><small>Pesquisadora Jr. do projeto <br>Engenheira Eletricista.</small></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<br>
+
+<br>
 
