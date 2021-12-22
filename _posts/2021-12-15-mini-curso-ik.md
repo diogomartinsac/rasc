@@ -3,7 +3,7 @@ layout: post-page
 title: Cinemática Inversa Aplicada
 subtitle: Fundamentos da cinemática by Juliana Santana
 cover-img: /assets/img/mini-curso-ik/abb-lab.png
-thumbnail-img: /assets/img/2021-11-19-cmu-rover/cover3.jpg
+thumbnail-img: /assets/img/mini-curso-ik/thumbnail.png
 share-img: /assets/img/rosa-logo-redondo.png
 tags: [rasc]
 comments: true
@@ -50,7 +50,7 @@ Precisamos entender o comportamento mecânico do robô para sermos capazes de pr
 * **Efetuador**: Fica localizado na parte livre da cadeia de elos do manipulador. É onde são acopladas as ferramentas que o robô utiliza para sua aplicação;
 * **Base**: Fica na parte inferior do robô e, é resposável por fixar o robô em alguma estrutura;
 * **Actuadores**: Proporcionam os movimentos das juntas do robô;
-* **Sensores**: São utilizados para coletar informações sobre o estado interno do robô ou sobre o ambiente.
+* **Sensores**: São utilizados para coletar informações sobre o estado interno do robô e sobre o ambiente.
 
 {:.center}
 [![drawing600](../assets/img/mini-curso-ik/manipulator-caracteristics.png)](../assets/img/mini-curso-ik/manipulator-caracteristics.png)
@@ -83,7 +83,7 @@ Os tipos de juntas mais utilizadas nos manipuladores são as juntas de revoluç�
 
 ## URDF
 
-Uma das aplicações destes conceitos está na implementação do URDF (Unified Robot Description Format), o qual é um arquivo em XML que permite a construção do modelo do seu robô, a partir da descrição do seu funcionamento e estrutura com base nas conexões dos seus elos e juntas, utilizando arquivos CAD para gerar a parte visual. Este [post](https://mhar-vell.github.io/rasc/2021-07-21-aperea-simulacao/) apresenta mais detalhes a respeito da configuração do URDF.
+Uma das aplicações destes conceitos está na implementação do URDF (Unified Robot Description Format), o qual é um arquivo em XML que permite a construção do modelo do robô, a partir da descrição do seu funcionamento e estrutura com base nas conexões dos seus elos e juntas, utilizando arquivos CAD para gerar a parte visual. Este [post](https://mhar-vell.github.io/rasc/2021-07-21-aperea-simulacao/) apresenta mais detalhes a respeito da configuração do URDF em um projeto.
 
 # Descrições espaciais e transformações
 
@@ -106,13 +106,13 @@ Para descrever a orientação de um ponto utilizamos uma matriz 3x3, denominada 
 
 ## Descrição de um sistema de referência
 
-O sistema de referências é um conjunto de 4 vetores que fornecem a posição e a orientação. Eles são usados para descrever um sistema de coordenadas em relação a outro. Por convenção são atribuídos alguns nomes e localizações específicos a certos sistemas de referência associados ao robô e ao seu espaço de trabalho, os quais são:
+O sistema de referência é um conjunto de 4 vetores que fornecem a posição e a orientação. Eles são usados para descrever um sistema de coordenadas em relação a outro. Por convenção são atribuídos alguns nomes e localizações específicos a certos sistemas de referência associados ao robô e ao seu espaço de trabalho, os quais são:
 
 * **Sistema de referência da base**: Está fixado a uma parte imóvel do robô (elo 0);
 * **Sistema de referência da estação**: Está fixo em um local relevante para a tarefa;
 * **Sistema de referência do punho**: Está fixo ao último elo do manipulador;
 * **Sistema de referência da ferramenta**: Está fixado à ponta de qualquer ferramenta que o robô esteja utilizando e quando não é utilizada uma ferramenta este é fixo com a origem entre as pontas dos dedos do robô;
-* **Sistema de referência da meta**: Está no local onde o robô deverá alcançar, a sua meta.
+* **Sistema de referência da meta**: Está no local onde o robô deverá alcançar, o seu objetivo.
 
 {:.center}
 [![drawing400](../assets/img/mini-curso-ik/referencia.png)](../assets/img/mini-curso-ik/referencia.png)
@@ -127,7 +127,7 @@ Retornando a falar sobre a cinemática...
 
 ## Cinemática Direta
 
-Conforme mencionado anteriormente, a cinemática direta determina onde o end-effector vai estar posicionado, considerando também sua orientação, se as juntas forem especificadas em uma posição definida. As equações da cinemática direta podem ser definiddas através de uma abordagem sistemática e geral baseada na álgebra linear, utilizando as transformações homogêneas associada aos parâmetros de Denavit- Hartenberg.
+Conforme mencionado anteriormente, a cinemática direta determina onde o end-effector vai estar posicionado, considerando também sua orientação, se as juntas forem especificadas em uma posição definida. As equações da cinemática direta podem ser definidas através de uma abordagem sistemática e geral baseada na álgebra linear, utilizando as transformações homogêneas associada aos parâmetros de Denavit- Hartenberg.
 
 ## Notação de Denavit-Hartenberg
 
@@ -137,14 +137,15 @@ Os parâmetros de Denavit-Hartenberg ou DH são 4 parâmetros associados a uma c
 [![drawing300](../assets/img/mini-curso-ik/para.png)](../assets/img/mini-curso-ik/para.png)
 
 Esta convenção foi desenvolvida por Jacques Denavit, o qual era doutor em Engenharia mecânica e tinha bastante interesse pela área principalmente em relação a cinemática e a dinâmica. 
-E por Richard Hartenberg que lecionou na área da Engenharia mecânica por cerca de 56 anos e desenvolveu diversas pesquisas na área, o que influenciou o renascimento do interesse de outros pesquisadores por essa área.
+E, por Richard Hartenberg que lecionou na área da Engenharia mecânica por cerca de 56 anos e desenvolveu diversas pesquisas, o que influenciou o renascimento do interesse de outros pesquisadores por essa área.
 
 {:.center}
 [![drawing400](../assets/img/mini-curso-ik/DH.png)](../assets/img/mini-curso-ik/DH.png)
 
 Esta notação provê uma metodologia padrão para escrever as equações de um manipulador onde os parâmetros de elo são definidos da seguinte maneira: 
 
-$ \theta_{i} \rightarrow$ o ângulo de $$\hat{X}_{i-1}$$ a $$\hat{X}_{i}$$ medida ao longo de $$\hat{Z}_i$$;
+
+$ \theta_{i} \rightarrow$ o ângulo de $\hat{X}_{i-1}$ a $\hat{X}_{i}$ medida ao longo de $\hat{Z}_i$;
 
 $ d_{i} \rightarrow$ a distância de $\hat{X}_{i-1}$ a $\hat{X}_{i}$ medida ao longo de $\hat{Z}_i$;
 
@@ -168,9 +169,9 @@ E, então as transformações de um elo a outro pode ser feita por meio do produ
 
 ## Cinemática Inversa
 
-Na cinemática indireta calculamos os valores dos ângulos das juntas dada a pose para o efetuador do robô. Desta forma, são feitas as transformações para encontrar a trasnformação que define o sistema de referência do punho {W} em relação ao sistema de referência da base {B}. 
+Na cinemática indireta calculamos os valores dos ângulos das juntas dada a pose para o efetuador do robô. Desta forma, são feitas as transformações para encontrar a transformação que define o sistema de referência do punho {W} em relação ao sistema de referência da base {B}. 
 
-A complexidade da cinemática inversa está na resolução das equações cinemáticas por serem não lineares. Portanto, temos que nos preocupar com a existência de soluções, visto que para que uma solução exista, a posição alvo deve estar dentro do espaço de trabalho do manipulador. E, também podem existir múltiplas soluções, o que configura-se como um desafio pois o sistema deve escolher apenas uma das soluções.
+A complexidade da cinemática inversa está na resolução das equações cinemáticas por serem não lineares. Portanto, temos que nos preocupar com a existência de soluções, visto que para que uma solução exista a posição alvo deve estar dentro do espaço de trabalho do manipulador. E, também podem existir múltiplas soluções, o que configura-se como um desafio pois o sistema deve escolher apenas uma das soluções.
 
 ## Categorias de soluções
 
@@ -204,7 +205,7 @@ Um exemplo de solucionador é o MoveIt, o qual é um pacote do ROS utilizado por
 
 ## Prática 2 - Simulação no CoppeliaSim
 
-A segunda prática deste mini-curso é a configuração de um manipulador no software CoppeliaSim. O software deve ser instalado através deste [link](https://www.coppeliarobotics.com/helpFiles/en/inverseKinematicsTutorial.htm), a versão utilizada é a educacional. Após o download do software siga as instruções deste [tutorial]().
+A segunda prática deste mini-curso é a configuração de um manipulador no software CoppeliaSim. O software deve ser instalado através deste [link](https://www.coppeliarobotics.com/downloads), a versão utilizada é a educacional. Após o download do software siga as instruções deste [tutorial](https://www.coppeliarobotics.com/helpFiles/en/inverseKinematicsTutorial.htm).
 
 {:.center}
 [![drawing400](../assets/img/mini-curso-ik/v-rep.png)](../assets/img/mini-curso-ik/v-rep.png)
@@ -213,7 +214,11 @@ O script disponibilizado no simulador apresenta 2 métodos de soluções para a 
 
 ## Considerações finais
 
-Este mini-curso apresentou os principais conceitos relacionados com a análise cinemática de um sistema de manipuladores e a metodologia para encontrar as equações cinemáticas do sistema. Esta metodologia envolve a descrição dos mecanismos por meio dos parâmetros de Denavit-Hartenberg e a trasnformação de um sistema de referência para outro através das matrizes homogêneas e a utilização dos métodos algébrico e geométrico para encontrar as equações da cinemática inversa de um manipulador simmples. A prática com o CoppeliaSim visa a aplicação de alguns dos conceitos abordados na apresentação em um modelo de um robô.
+Este mini-curso apresentou os principais conceitos relacionados com a análise cinemática de um sistema de manipuladores e a metodologia para encontrar as equações cinemáticas do sistema. 
+
+Esta metodologia envolve a descrição dos mecanismos por meio dos parâmetros de Denavit-Hartenberg e a transformação de um sistema de referência para outro através das matrizes homogêneas e a utilização dos métodos algébrico e geométrico para encontrar as equações da cinemática inversa de um manipulador simples. 
+
+A prática com o CoppeliaSim visa a aplicação de alguns dos conceitos abordados na apresentação em um ambiente de simulação. Este software apresenta diversos modelos de robôs manipuladores.
 
 
 <iframe src = "https://drive.google.com/file/d/1OYpyLJfsIrkP8Lt4HiOZhbJuJXMybuVM/preview" width='740' height='430' allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
