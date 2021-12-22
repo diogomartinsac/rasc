@@ -39,11 +39,9 @@ A pesquisa realizada foi de extrema importância para a análise e o aprendizado
 
 ## Referências
 
-[1] CNBC. **Look inside the hospital in China where coronavirus patients were treated by robots.** 2021. <https://www.cnbc.com/2020/03/23/video-hospital-in-china-where-covid-19-patients-treated-by-robots.html>. Accessed: 2021-12-02.
-
-[2] SCIENCE, P. **Tesla wants to make humanoid robots. Here’s their competition.** 2021.<https://www.popsci.com/technology/list-of-companies-creating-human-like-robots/>. Accessed: 2021-12-02.
-
-[3] ASME. **10 Humanoid Robots of 2020. 2021.** <https://www.asme.org/topics-resources/content/10-humanoid-robots-of-2020>. Accessed: 2021-12-02. 
+1. CNBC. **Look inside the hospital in China where coronavirus patients were treated by robots.** 2021. <https://www.cnbc.com/2020/03/23/video-hospital-in-china-where-covid-19-patients-treated-by-robots.html>. Accessed: 2021-12-02.
+2. SCIENCE, P. **Tesla wants to make humanoid robots. Here’s their competition.** 2021.<https://www.popsci.com/technology/list-of-companies-creating-human-like-robots/>. Accessed: 2021-12-02.
+3. ASME. **10 Humanoid Robots of 2020. 2021.** <https://www.asme.org/topics-resources/content/10-humanoid-robots-of-2020>. Accessed: 2021-12-02. 
 
 * * *
 
