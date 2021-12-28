@@ -1,11 +1,12 @@
 ---
 layout: post-page
 title: Robôs Antropomórficos
-subtitle: Um estudo do Estado da Arte by Juliana Santana
+subtitle: Um estudo do Estado da Arte
 cover-img: /assets/img/humanoids-sota/wallpaper2.png
 thumbnail-img: /assets/img/humanoids-sota/thumb2.png
 share-img: /assets/img/rosa-logo-redondo.png
-tags: [rasc]
+author: Juliana Santana
+tags: [blog]
 comments: true
 ---
 

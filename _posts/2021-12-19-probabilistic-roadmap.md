@@ -1,14 +1,13 @@
 ---
 layout: post
 title: Probabilistic Roadmap
-subtitle: Implementação do Planejador by Mateus Seixas
+subtitle: Implementação do Planejador
 cover-img: assets/img/prm/maxresdefaultcr.jpg
 thumbnail-img: assets/img/prm/TurtleBot3_WafflePi.png
-share-img: /assets/img/rosa-logo-redondo.png
+author: Mateus Seixas
 comments: true
-tags: [rasc]
+tags: [blog]
 ---
-## Introdução
 
 Foi feita a implementação do algoritmo de planejamento de trajetória Probabilistic Roadmap (PRM) em um robô diferencial não-holonômico chamado Turtlebot3
 para permitir a navegação autônoma desse robô. Os testes foram realizados em ambiente

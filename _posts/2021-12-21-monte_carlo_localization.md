@@ -23,7 +23,7 @@ Em ambientes externos abertos, é comum usar GPS para obter dados sobre a posiç
 ### Monte Carlo Localization
 
 
-O Monte Carlo Localization (MCL) é um algortmo destiando a sistemas robóticos móveis com objetivo de obter dados sobre a posição e orientação do robô no ambiente. Este algoritmo  usa um filtro de partículas, para posição e orientação, e um mapa do ambiente para realizar a estimação. As partículas são estimadas usando filtro bayesiano recursivo. Geralmente são usados mapas de elevação para abstecer de dados o Monte Carlo Localization.
+O Monte Carlo Localization (MCL) é um algoritmo destiando a sistemas robóticos móveis com objetivo de obter dados sobre a posição e orientação do robô no ambiente. Este algoritmo  usa um filtro de partículas, para posição e orientação, e um mapa do ambiente para realizar a estimação. As partículas são estimadas usando filtro bayesiano recursivo. Geralmente são usados mapas de elevação para abastecer de dados o Monte Carlo Localization.
 
 ### Mapa de Multi-Níveis
 
@@ -56,7 +56,7 @@ Um mapa conceitual foi realizado para compreender melhor o artigo através de li
 
 
 
-## conclusão
+## Conclusão
 
 O Monte Carlo Localization in Outdoor Terrains Using Multi-Level Surface Maps é um excelente artigo. A leitura e a interpretação deste material, juntamente com a montagem do mapa conceitual é válido para adquirir conhecimentos sobre a robótica móvel e sobre as estratégias que a envolvem a localização destes.
 

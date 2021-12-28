@@ -1,11 +1,12 @@
 ---
 layout: post-page
 title: Exploração utilizando D*
-subtitle: Planejadores Globais no TurtleBot3 by Juliana Santana
+subtitle: Planejadores Globais no TurtleBot3
 cover-img: assets/img/dstar/wallpaper4.png
 thumbnail-img: /assets/img/dstar/D_star.gif
 share-img: /assets/img/rosa-logo-redondo.png
-tags: [rasc]
+author: Juliana Santana
+tags: [blog]
 comments: true
 ---
 

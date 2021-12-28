@@ -1,11 +1,12 @@
 ---
 layout: post-page
 title: Cinemática Inversa Aplicada
-subtitle: Fundamentos da cinemática by Juliana Santana
+subtitle: Fundamentos da cinemática
 cover-img: /assets/img/mini-curso-ik/abb-lab.png
 thumbnail-img: /assets/img/mini-curso-ik/thumbnail.png
 share-img: /assets/img/rosa-logo-redondo.png
-tags: [rasc]
+author: Juliana Santana
+tags: [blog]
 comments: true
 ---
 
@@ -144,15 +145,19 @@ E, por Richard Hartenberg que lecionou na área da Engenharia mecânica por cerc
 
 Esta notação provê uma metodologia padrão para escrever as equações de um manipulador onde os parâmetros de elo são definidos da seguinte maneira: 
 
+{:.center}
+$\theta_{i}$ $\rightarrow$ o ângulo de $\widehat{X_{i-1}}$ a $\widehat{X}_{i}$ medida ao longo de $\widehat{Z}_i$
 
-$ \theta_{i} \rightarrow$ o ângulo de $\hat{X}_{i-1}$ a $\hat{X}_{i}$ medida ao longo de $\hat{Z}_i$;
+{:.center}
+$d_{i}$ $\rightarrow$ a distância de $\widehat{X_{i-1}}$ a $\widehat{X}_{i}$ medida ao longo de $\widehat{Z}_i$
 
-$ d_{i} \rightarrow$ a distância de $\hat{X}_{i-1}$ a $\hat{X}_{i}$ medida ao longo de $\hat{Z}_i$;
+{:.center}
+$a_{i}$ $\rightarrow$ a distância de $\widehat{Z_{i}}$ a $\widehat{Z_{i+1}}$ medida ao longo de $\widehat{X}_i$
 
-$ a_{i} \rightarrow$ a distância de $\hat{Z}_i$ a $\hat{Z}_{i+1}$ medida ao longo de $\hat{X}_i$;
+{:.center}
+$\alpha_{i} \rightarrow$ o ângulo de $\widehat{Z_{i}}$ a $\widehat{Z_{i+1}}$ medida ao longo de $\widehat{X}_i$
 
-$ \alpha_{i} \rightarrow$ o ângulo de $\hat{Z}_i$ a $\hat{Z}_{i+1}$ medida ao longo de $\hat{X}_i$.
-
+<br>
 
 {:.center}
 [![drawing400](../assets/img/mini-curso-ik/DHParameter.png)](../assets/img/mini-curso-ik/DH.png)

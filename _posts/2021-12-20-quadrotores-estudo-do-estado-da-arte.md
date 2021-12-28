@@ -7,10 +7,8 @@ thumbnail-img: assets/img/quadrotor/dronecrop2.jpeg
 share-img: /assets/img/rosa-logo-redondo.png
 author: Mateus Seixas
 comments: true
-tags: [rasc] #AJUSTAR
+tags: [blog] #AJUSTAR
 ---
-
-## Quadrotores
 
 Quadrotores são aeronaves de asas rotativas, ou seja, são sustentadas e movimentadas
 por rotores. Diferente das aeronaves de asas fixas, como aviões, as aeronaves de asas
