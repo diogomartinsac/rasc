@@ -60,6 +60,7 @@ navbar-links:
     - behavior trees: "2021-10-11-hsfm-behavior-trees"
     - docker: "2021-12-13-docker-first-steps"
     - ia para iniciantes: "2021-12-14-ia-para-iniciantes"
+    - computer vision basics: "2022-02-15-computer-vision-basics.md"
 
   blog: "blog"
   
