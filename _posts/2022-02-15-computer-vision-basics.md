@@ -1,7 +1,7 @@
 ---
 layout: post-page
 title: Computer Vision Basics
-subtitle: Comparação entre FSM, HSFM e Behavior Trees
+subtitle: Basic Concepts
 cover-img: /assets/img/2022-02-15-computer-vision-basics/cover.jpg
 thumbnail-img: /assets/img/2022-02-15-computer-vision-basics/cover.jpg
 share-img: /assets/img/rosa-logo-redondo.png
