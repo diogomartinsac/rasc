@@ -22,9 +22,7 @@ In this practical mini course in computer vision for beginners, you will be intr
 During the course we will analyze and process images. First, we'll look at the properties of images and explore the different image processing commands. After learning the basics, we will go through some exercises of identifying objects in images.
 
 
-<br>
-<iframe src ="https://colab.research.google.com/drive/1llBM5qg1iFfzHuy12C9C9a24Yp47-R8A#scrollTo=PloSELX9lbNB" width='740' height='430' allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
-<br>
+[Colab](https://drive.google.com/file/d/1llBM5qg1iFfzHuy12C9C9a24Yp47-R8A/view?usp=sharing) 
 
 <br>
 <iframe src ="https://drive.google.com/file/d/1jIQ0Wfs9NheBQGSKlzipJLbvuGi3efoh/preview" width='740' height='430' allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
@@ -32,14 +30,19 @@ During the course we will analyze and process images. First, we'll look at the p
 
 ### YOLO V4 - Object Detection
 
+[Colab](https://drive.google.com/file/d/1ayBpk8k-qFkne_UGfIBt6EltTfNkjUE0/view?usp=sharing) 
+
 ### Retina Face - Face Localization
+
+[Colab](https://drive.google.com/file/d/1MruLLmjDxBDtAZtNEe4giBPB5PBQgXHs/view?usp=sharing) 
 
 ### Camera Calibration
 
+[Colab](https://drive.google.com/file/d/1q74XroETNmT3-jy1ir1wMBp2HHem1uF1/view?usp=sharing) 
+
 ### Fiducial Markers
 
-
-### Referências
+[Colab](https://drive.google.com/file/d/1_lgW0aeJHUryArxjkNj8fjNVAGQViscs/view?usp=sharing) 
 
 
 <hr>
