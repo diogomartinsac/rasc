@@ -28,46 +28,65 @@ During the course we will analyze and process images. First, we'll look at the p
 <iframe src ="https://drive.google.com/file/d/1jIQ0Wfs9NheBQGSKlzipJLbvuGi3efoh/preview" width='740' height='430' allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
 <br>
 
+[Download](https://drive.google.com/file/d/1ZwGIun9K3DtFqcpRCo3hfRYTc5rOS6g1/view?usp=sharing)
+
 ### YOLO V4 - Object Detection
+
+In this exercise, we will use a pre-trained network (YOLOv4) to detect objects and people in images. This exercise also teaches how to make a video stream from the computer's camera using google drive, and finally, perform inferences using YOLO V4 from images using the webcam. 
 
 [Colab](https://drive.google.com/file/d/1ayBpk8k-qFkne_UGfIBt6EltTfNkjUE0/view?usp=sharing) 
 
 ### Retina Face - Face Localization
 
+This exercise shows the results of testing the Retinaface model trained on Tensorflow2.0+. The pre-trained model is downloaded and used in a test image to recognize people's faces and their points of interest. 
+
 [Colab](https://drive.google.com/file/d/1MruLLmjDxBDtAZtNEe4giBPB5PBQgXHs/view?usp=sharing) 
 
 ### Camera Calibration
 
+This exercise demonstrates how geometric camera calibration estimates the parameters of a lens and image sensor from an image or video. In this notebook, the theory about camera modeling is shown, parameters used, and the transformations necessary to calibrate a camera. From the calibration, it is possible to use the parameters to correct lens distortion, measure the size of an object or determine the location of the camera in the scene. These tasks are used in computer vision applications to detect and measure objects. They are also used in robotics, navigation systems, and 3D scene reconstruction. 
+
 [Colab](https://drive.google.com/file/d/1q74XroETNmT3-jy1ir1wMBp2HHem1uF1/view?usp=sharing) 
 
 ### Fiducial Markers
+
+Israel says:This exercise shows the use of a resource for estimating poses known as fiducial markers. A fiducial marker is an artificial reference point added to a scene to make it easier to find matching points between images. In this exercise, the theory about the markers and especially about the Aruco marker will be learned. A practical exercise is made showing how to identify and locate these markers in an image. 
 
 [Colab](https://drive.google.com/file/d/1_lgW0aeJHUryArxjkNj8fjNVAGQViscs/view?usp=sharing) 
 
 
 <hr>
 
-<!-- autor -->
-<center><h3 class="post-title">Autor</h3><br/></center>
+
+<center><h3 class="post-title">Autors</h3><br/></center>
 <div class="row">
-  <div class="col-xl-8 offset-xl-0 col-lg-4 offset-lg-0 center">
-    <table class="table-borderless highlight" style="background: #00000000">
+  <div class=" col-xl-auto offset-xl-0 col-lg-4 offset-lg-0">
+    <table class="table-borderless highlight">
       <thead>
         <tr>
-          <th><img src="{{ 'assets/img/people/israelneto-1.png' | relative_url }}" width="100" alt="amarco" class="img-fluid rounded-circle" /></th>
+          <th><center><img src="{{ 'assets/img/people/diogomartins-1.png' | relative_url }}" width="100" alt="diogo" class="img-fluid rounded-circle" /></center></th>
+          <th></th>
+          <th><center><img src="{{ 'assets/img/people/israelneto-1.png' | relative_url }}" width="100" alt="israel" class="img-fluid rounded-circle"/></center></th>
+          <th></th>
+          <th><center><img src="{{ 'assets/img/people/marcoreis8b&w-1.png' | relative_url }}" width="100" alt="marco" class="img-fluid rounded-circle"/></center></th>
         </tr>
       </thead>
       <tbody>
         <tr class="font-weight-bolder" style="text-align: center margin-top: 0">
-          <td>Israel Motta</td>
+          <td width="33.33%">Diogo Martins</td>
+          <td></td>
+          <td width="33.33%">Israel Motta</td>
+          <td></td>
+          <td width="33.33%">Marco Reis</td>
         </tr>
         <tr style="text-align: center" >
-          <td style="vertical-align: top; text-align: justify"><small>Pesquisador bolsista no CC RoSA, Engenheiro Mecatrônico, Especialista em Robótica e Sistemas Autonônomos.</small></td>
+          <td style="vertical-align: top"><small>Robotics Enthusiast. Master student in Mechatronics, Specialist in Robotics and Autonomous Systems, Engineer in Automation and Control. <br> <a href="https://www.linkedin.com/in/diogo-alexandre-martins/">LinkedIn</a></small></td>
           <td></td>
+          <td style="vertical-align: top"><small>Research fellow at CC RoSA, Mechatronics Engineer, Specialist in Robotics and Autonomous Systems. <br> <a href="https://www.linkedin.com/in/israel-neto/">LinkedIn</a> </small></td>
+          <td></td>
+          <td style="vertical-align: top"><small>Senior Researcher - Master in Production Engineering and Electrical Engineer.  <br> <a href="https://www.linkedin.com/in/marco-reis-061618/">LinkedIn</a></small></td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
-
-<br>
