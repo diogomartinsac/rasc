@@ -50,7 +50,7 @@ This exercise demonstrates how geometric camera calibration estimates the parame
 
 ### Fiducial Markers
 
-Israel says:This exercise shows the use of a resource for estimating poses known as fiducial markers. A fiducial marker is an artificial reference point added to a scene to make it easier to find matching points between images. In this exercise, the theory about the markers and especially about the Aruco marker will be learned. A practical exercise is made showing how to identify and locate these markers in an image. 
+This exercise shows the use of a resource for estimating poses known as fiducial markers. A fiducial marker is an artificial reference point added to a scene to make it easier to find matching points between images. In this exercise, the theory about the markers and especially about the Aruco marker will be learned. A practical exercise is made showing how to identify and locate these markers in an image. 
 
 [Colab](https://drive.google.com/file/d/1_lgW0aeJHUryArxjkNj8fjNVAGQViscs/view?usp=sharing) 
 
