@@ -1,26 +1,42 @@
 ---
 layout: post-page
-title: Computer Vision Basics
-subtitle: Basic Concepts
+title: Computer Vision
+subtitle: Basic Concepts and Practical Examples
 cover-img: /assets/img/2022-02-15-computer-vision-basics/cover.jpg
 thumbnail-img: /assets/img/2022-02-15-computer-vision-basics/cover.jpg
 share-img: /assets/img/rosa-logo-redondo.png
-author: Israel Motta, Diogo Martins
+author: Israel Motta and Diogo Martins
 comments: false
 tags:
 ---
 
-## Introduction
+In this article are gathered some concepts for learning what computer vision is, and how to make computers able to visualize images and interpret the information contained in them, which is already an intrinsic capacity of the human being.
+
+This introduction covers areas such as digital image processing, deep learning, camera calibration, and the use of fiducial markers. In each of these areas, some concepts are discussed and some techniques involved are demonstrated using Python. 
+
+
+### Basic Concepts
 
 In this practical mini course in computer vision for beginners, you will be introduced to approaches used to solve the task of pattern recognition in images, visualizing the challenges encountered, applications and the subdivisions of recognition in computer vision.
 
 During the course we will analyze and process images. First, we'll look at the properties of images and explore the different image processing commands. After learning the basics, we will go through some exercises of identifying objects in images.
 
 
+<br>
+<iframe src ="https://colab.research.google.com/drive/1llBM5qg1iFfzHuy12C9C9a24Yp47-R8A#scrollTo=PloSELX9lbNB" width='740' height='430' allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+<br>
 
+<br>
+<iframe src ="https://drive.google.com/file/d/1jIQ0Wfs9NheBQGSKlzipJLbvuGi3efoh/preview" width='740' height='430' allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+<br>
 
+### YOLO V4 - Object Detection
 
-## Conclusão
+### Retina Face - Face Localization
+
+### Camera Calibration
+
+### Fiducial Markers
 
 
 ### Referências
